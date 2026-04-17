@@ -57,7 +57,7 @@ public class KategoriKuis {
             
             
             long waktuSelesai = System.currentTimeMillis(); 
-            double selisihDetik = (waktuSelesai - waktuMulai) / 1000.0; // Ubah milidetik ke detik
+            double selisihDetik = (waktuSelesai - waktuMulai) / 1000.0; 
 
             if (jawaban == p.getJawabanBenar()) {
                 System.out.println(">> Mantap! Jawaban BENAR.");
@@ -67,7 +67,7 @@ public class KategoriKuis {
                 
                 
                 if (selisihDetik >= 20) {
-                    poinDidapat = 1; // Lewat 10 detik cuma dapat 1 poin
+                    poinDidapat = 1; 
                     System.out.println("Yah, waktu kamu lewat dari 20 detik. Kamu cuma dapat 1 poin.");
                 } else {
                     poinDidapat = 100 - ((int)selisihDetik * 5);

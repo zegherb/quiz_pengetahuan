@@ -11,9 +11,9 @@ public class Main {
         daftarKategori[2] = new KuisPengetahuanAlam();
 
         System.out.println("=======================================");
-        System.out.println("    SELAMAT DATANG DI GAME KUIS BRO!       ");
+        System.out.println("SELAMAT DATANG DI GAME KUIS PENGETAHUAN!");
         System.out.println("=======================================");
-        System.out.print("Masukkan nama kamu bro: ");
+        System.out.print("Masukkan nama Kamu: ");
         
         String inputNama = scanner.nextLine();
         Player pemain = new Player(inputNama); 
@@ -32,7 +32,7 @@ public class Main {
 
             switch (menu) {
                 case "1":
-                    System.out.println("\n--- PILIH KATEGORI ---");
+                    System.out.println("\n=== PILIH KATEGORI ===");
                     for (int i = 0; i < daftarKategori.length; i++) {
                         System.out.println((i + 1) + ". " + daftarKategori[i].getNamaKategori());
                     }
@@ -51,19 +51,19 @@ public class Main {
                     break;
 
                 case "2":
-                    System.out.println("\n--- HIGH SCORE KATEGORI ---");
+                    System.out.println("\n=== HIGH SCORE ===");
                     for (int i = 0; i < daftarKategori.length; i++) {
                         daftarKategori[i].tampilkanSkorTertinggi();
                     }
                     break;
 
                 case "3":
-                    System.out.println("\nThanks udah main, " + pemain.getNama() + "! Total poin akhirmu: " + pemain.getScore());
+                    System.out.println("\nTerima kasih udah main, " + pemain.getNama() + "! Total poin akhirmu: " + pemain.getScore());
                     isRunning = false;
                     break;
 
                 default:
-                    System.out.println("\nPilihan nggak valid, coba lagi bro.");
+                    System.out.println("\nPilihan tidak valid, coba lagi bro.");
             }
         }
         scanner.close();
