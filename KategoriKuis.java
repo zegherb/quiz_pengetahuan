@@ -64,8 +64,6 @@ public class KategoriKuis {
                 System.out.printf("Waktu menjawab: %.2f detik.\n", selisihDetik);
                 
                 int poinDidapat;
-                
-                
                 if (selisihDetik >= 20) {
                     poinDidapat = 1; 
                     System.out.println("Yah, waktu kamu lewat dari 20 detik. Kamu cuma dapat 1 poin.");

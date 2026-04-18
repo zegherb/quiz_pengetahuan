@@ -30,19 +30,7 @@ public class KuisPengetahuanUmum extends KategoriKuis {
                 new String[]{"Sudan Selatan", "Burundi", "Zambia", "Madagascar"}, 'A');
         soal[9] = new Pertanyaan("Makanan paling mahal di dunia adalah?", 
                 new String[]{"Truffle", "Saffron", "Caviar", "Bottled Water"}, 'C');
-        
-        Random rand = new Random();
-        for (int i = soal.length - 1; i > 0; i--) {
-                int j = rand.nextInt(i + 1);
-                Pertanyaan temp = soal[i];
-                soal[i] = soal[j];
-                soal[j] = temp;
-        }
-        Pertanyaan[] soalTerpilih = new Pertanyaan[5];
-        for (int i = 0; i < 5; i++) {
-                soalTerpilih[i] = soal[i];
-        }
 
-        setDaftarPertanyaan(soalTerpilih);
+        setDaftarPertanyaan(soal);
     }
 }

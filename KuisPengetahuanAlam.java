@@ -30,19 +30,7 @@ public class KuisPengetahuanAlam extends KategoriKuis {
                 new String[]{"Kondensasi", "Evaporasi", "Presipitasi", "Sublimasi"}, 'B');
         soal[9] = new Pertanyaan("Siapa yang menemukan hukum gravitasi universal?", 
                 new String[]{"Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"}, 'A');
-
-        Random rand = new Random();
-        for (int i = soal.length - 1; i > 0; i--) {
-                int j = rand.nextInt(i + 1);
-                Pertanyaan temp = soal[i];
-                soal[i] = soal[j];
-                soal[j] = temp;
-        }
-        Pertanyaan[] soalTerpilih = new Pertanyaan[5];
-        for (int i = 0; i < 5; i++) {
-                soalTerpilih[i] = soal[i];
-        }
                
-        setDaftarPertanyaan(soalTerpilih);
+        setDaftarPertanyaan(soal);
     }
 }

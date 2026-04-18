@@ -30,19 +30,7 @@ public class KuisTeknologi extends KategoriKuis {
                 new String[]{"RAM", "CPU", "Hard Drive", "GPU"}, 'C');
         soal[9] = new Pertanyaan("Apa nama dari teknologi yang memungkinkan komputer untuk berkomunikasi satu sama lain?", 
                 new String[]{"Internet", "Intranet", "Extranet", "World Wide Web"}, 'A');
-        
-        Random rand = new Random();
-        for (int i = soal.length - 1; i > 0; i--) {
-                int j = rand.nextInt(i + 1);
-                Pertanyaan temp = soal[i];
-                soal[i] = soal[j];
-                soal[j] = temp;
-        }
-        Pertanyaan[] soalTerpilih = new Pertanyaan[5];
-        for (int i = 0; i < 5; i++) {
-                soalTerpilih[i] = soal[i];
-        }
 
-        setDaftarPertanyaan(soalTerpilih);
+        setDaftarPertanyaan(soal);
     }
 }
